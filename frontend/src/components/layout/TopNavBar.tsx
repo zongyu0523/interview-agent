@@ -15,7 +15,7 @@ export function TopNavBar() {
       {/* Right: GitHub + User */}
       <div className="flex items-center gap-4">
         <a
-          href="https://github.com/openagentsbox/interview-agent"
+          href="https://github.com/zongyu0523/interview-agent"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
