@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/interview(.*)", "dest": "/index.html" },
+    { "src": "/", "status": 301, "headers": { "Location": "/interview" } }
+  ]
+}
