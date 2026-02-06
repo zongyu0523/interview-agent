@@ -1,8 +1,7 @@
 import type { ResumeData, Application, Session, InterviewType, SessionMode } from "../types/resume";
 
-const API_BASE = import.meta.env.PROD
-  ? "https://interview-agent-production-b358.up.railway.app"
-  : "http://localhost:8000";
+// ✅ 使用環境變數控制 API URL，未設定則使用本地端
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 const USER_STORAGE_KEY = "jiaf_user_id";
 
