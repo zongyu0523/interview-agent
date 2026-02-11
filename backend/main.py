@@ -21,6 +21,7 @@ from backend.api.api_feedback import router as feedback_router
 from backend.api.api_speech import router as speech_router
 from backend.api.api_key import router as key_router
 from backend.api.api_match import router as match_router
+from backend.api.api_admin import router as admin_router
 from backend.graph import init_checkpointer, close_checkpointer
 
 # Rate limiter (by IP)
@@ -73,6 +74,7 @@ app.include_router(feedback_router)
 app.include_router(speech_router)
 app.include_router(key_router)
 app.include_router(match_router)
+app.include_router(admin_router)
 
 
 if __name__ == "__main__":

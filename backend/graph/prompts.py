@@ -106,3 +106,12 @@ def get_respond_prompt():
             print(f"Warning: LangSmith pull failed (init_task): {e}")
 
     return _load_yaml(f"respond_prompt.yaml")
+
+
+def clear_prompt_cache():
+    """Clear all prompt caches so next call re-fetches from LangSmith."""
+    _load_yaml.cache_clear()
+    get_init_task_prompt.cache_clear()
+    get_update_task_prompt.cache_clear()
+    get_tool_prompt.cache_clear()
+    get_respond_prompt.cache_clear()

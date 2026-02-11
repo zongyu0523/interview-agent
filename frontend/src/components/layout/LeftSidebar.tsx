@@ -89,12 +89,11 @@ export function LeftSidebar({
           return (
             <div
               key={app.id}
-              className={`group flex h-14 w-full items-center gap-3 rounded-xl px-3.5 py-3 ${
-                isActive ? "bg-[var(--color-hover)]" : "hover:bg-[var(--color-hover)]"
-              }`}
+              className={`group flex h-14 w-full items-center gap-3 rounded-xl px-3.5 py-3 ${isActive ? "bg-[var(--color-hover)]" : "hover:bg-[var(--color-hover)]"
+                }`}
             >
               <button
-                className="flex flex-1 items-center gap-3 text-left"
+                className="flex min-w-0 flex-1 items-center gap-3 text-left overflow-hidden"
                 onClick={() => onSelectCompany?.(app.id)}
               >
                 <div
