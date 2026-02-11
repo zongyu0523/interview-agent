@@ -33,7 +33,7 @@ import { queryKeys } from "../hooks/queryKeys";
 const TYPE_LABELS: Record<InterviewType, string> = {
   recruiter: "Recruiter",
   technical: "Technical",
-  hiring_manager: "Hiring Mgr",
+  hiring_manager: "Manager",
   behavioral: "Behavioral",
 };
 
@@ -271,7 +271,7 @@ export function InterviewCoach() {
 
   // ─── TTS playback (streaming) ───
   function stopAudio() {
-    currentReaderRef.current?.cancel().catch(() => {});
+    currentReaderRef.current?.cancel().catch(() => { });
     currentReaderRef.current = null;
     if (currentAudioRef.current) {
       currentAudioRef.current.pause();
@@ -296,7 +296,7 @@ export function InterviewCoach() {
         setAudioStateType(null);
       }
     });
-    audio.play().catch(() => {});
+    audio.play().catch(() => { });
   }
 
   async function playText(text: string, msgIndex?: number) {
@@ -365,7 +365,7 @@ export function InterviewCoach() {
               if (!started) {
                 started = true;
                 if (msgIndex !== undefined) setAudioStateType("playing");
-                audio.play().catch(() => {});
+                audio.play().catch(() => { });
               }
             }
 
@@ -508,6 +508,7 @@ export function InterviewCoach() {
   const tabs = sessions.map((s) => ({
     id: s.id,
     label: TYPE_LABELS[s.type] || s.type,
+    type: s.type,
     active: s.id === activeSessionId,
   }));
 

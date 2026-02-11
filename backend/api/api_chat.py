@@ -92,11 +92,9 @@ async def get_session_info(session_id: str) -> tuple[str, dict]:
         "work_experience": resume.get("work_experience", []),
         "projects": resume.get("projects", []),
         "education": resume.get("education", []),
-        "skills": {
-            "hard_skills": basic_info.get("hard_skills", []),
-            "soft_skills": basic_info.get("soft_skills", []),
-            "languages": basic_info.get("languages", []),
-        },
+        "hard_skills": basic_info.get("hard_skills", []),
+        "soft_skills": basic_info.get("soft_skills", []),
+        "languages": basic_info.get("languages", []),
         "interview_hooks": resume.get("interview_hooks", []),
         # Application
         "company_name": application.get("company_name") or "",
